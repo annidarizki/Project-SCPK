@@ -22,10 +22,10 @@
 			<th>Alamat</th>
 			<th>No Telp</th>
 		</tr>
-		@foreach($identitas_kader as $k)
+		@foreach($cadres as $k)
 		<tr>
 			<td>{{ $k->nama }}</td>
-			<td>{{ $k->ttl_kader }}</td>
+			<td>{{ $k->ttl }}</td>
 			<td>{{ $k->jenis_kelamin }}</td>
 			<td>{{ $k->umur }}</td>
 			<td>{{ $k->alamat }}</td>
@@ -33,9 +33,9 @@
 
 			
 			<td>
-				<a href="/idkader/editkader/{{ $k->id_kader }}">Edit</a>
+				<a href="/idkader/editkader/{{ $k->id }}">Edit</a>
 				|
-				<a href="/idkader/hapuskader/{{ $k->id_kader }}">Hapus</a>
+				<a href="/idkader/hapuskader/{{ $k->id}}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach

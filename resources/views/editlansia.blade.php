@@ -13,17 +13,17 @@
 	<br/>
 	<br/>
 
-	@foreach($identitas_lansia as $l)
+	@foreach($elders as $l)
 	<form action="/idlansia/updatelansia" method="post">
 		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $l->id_lansia }}"> <br/>
+		<input type="hidden" name="id" value="{{ $l->id }}"> <br/>
 		Nama <input type="text" required="required" name="nama" value="{{ $l->nama }}"> <br/>
 		Tanggal Lahir <input type="date" required="required" name="tgl_lahir" value="{{ $l->tgl_lahir }}"> <br/>
 		Tempat Lahir <input type="text" required="required" name="tempat_lahir" value="{{ $l->tempat_lahir }}"> <br/>
 		Jenis Kelamin <input type="text" required="required" name="jenis_kelamin" value="{{ $l->jenis_kelamin }}"> <br/>
 		Alamat <input type="text" required="required" name="alamat" value="{{ $l->alamat }}"> <br/>
 		No Telp <input type="text" required="required" name="no_telp" value="{{ $l->no_telp }}"> <br/>
-
+		Id_Pendamping <input type="text" required="required" name="companion_id" value="{{$1-> companion_id}}"><br/>
 		<input type="submit" value="Simpan Data">
 	</form>
 	@endforeach

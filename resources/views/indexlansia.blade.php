@@ -22,7 +22,7 @@
 			<th>Alamat</th>
 			<th>No Telp</th>
 		</tr>
-		@foreach($identitas_lansia as $l)
+		@foreach($elders as $l)
 		<tr>
 			<td>{{ $l->nama }}</td>
 			<td>{{ $l->tgl_lahir }}</td>
@@ -33,9 +33,9 @@
 
 			
 			<td>
-				<a href="/idlansia/editlansia/{{ $l->id_lansia }}">Edit</a>
+				<a href="/idlansia/editlansia/{{ $l->id }}">Edit</a>
 				|
-				<a href="/idlansia/hapuslansia/{{ $l->id_lansia }}">Hapus</a>
+				<a href="/idlansia/hapuslansia/{{ $l->id }}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach

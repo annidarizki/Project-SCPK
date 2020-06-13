@@ -13,10 +13,10 @@
 	<br/>
 	<br/>
 
-	@foreach($identitas_pendamping as $p)
+	@foreach($companions as $p)
 	<form action="/identitas/update" method="post">
 		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $p->id_pendamping }}"> <br/>
+		<input type="hidden" name="id" value="{{ $p->id_companions }}"> <br/>
 		Nama <input type="text" required="required" name="nama" value="{{ $p->nama }}"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>

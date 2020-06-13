@@ -17,14 +17,14 @@
 		<tr>
 			<th>Nama</th>
 		</tr>
-		@foreach($identitas_pendamping as $p)
+		@foreach($companions as $p)
 		<tr>
 			<td>{{ $p->nama }}</td>
 			
 			<td>
-				<a href="/identitas/edit/{{ $p->id_pendamping }}">Edit</a>
+				<a href="/identitas/edit/{{ $p->companions_id }}">Edit</a>
 				|
-				<a href="/identitas/hapus/{{ $p->id_pendamping }}">Hapus</a>
+				<a href="/identitas/hapus/{{ $p->companions_id }}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach
